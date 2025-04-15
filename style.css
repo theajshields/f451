@@ -90,6 +90,7 @@ body {
   left: 0;
   background: url("https://res.cloudinary.com/dunkimages/image/upload/v1569903804/codepen/image-revealer-1.jpg") no-repeat;
   background-size: cover;
+  transition: border-radius 0.3s ease; /* Animate border-radius */
 }
 
 .over-slide {
@@ -99,6 +100,7 @@ body {
   height: 100%;
   width: 100%;
   overflow: hidden;
+  transition: border-radius 0.3s ease; /* Animate border-radius */
 }
 
 .over-image {

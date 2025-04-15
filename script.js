@@ -83,11 +83,13 @@
   lastScrollY = window.scrollY;
 
   $(window).on('scroll', function() {
-    var $imageReveal, $leftImage, $rightImage, $imageWrapper, borderRadiusValue, currentScroll, maxHeight, maxPullVW, maxScroll, minHeight, pullAmount, scaleValue, scrollProgress, spacerHeight;
+    var $imageReveal, $leftImage, $rightImage, $imageWrapper, $underSlide, $overSlide, borderRadiusValue, currentScroll, maxHeight, maxPullVW, maxScroll, minHeight, pullAmount, scaleValue, scrollProgress, spacerHeight;
     maxScroll = 500; // amount of scroll (px) it takes to complete the animation
     currentScroll = window.scrollY;
     $imageReveal = $('.center-wrapper');
     $imageWrapper = $('.image-wrapper'); // Select the image wrapper element
+    $underSlide = $('.under-slide'); // Select the under slide element
+    $overSlide = $('.over-slide'); // Select the over slide element
   
     // Clamp scroll value between 0 and maxScroll
     scrollProgress = Math.min(currentScroll, maxScroll);
@@ -102,6 +104,10 @@
   
     // Animate border-radius of the image wrapper
     $imageWrapper.css('border-radius', `${borderRadiusValue}px`);
+  
+    // Animate border-radius of under and over slides
+    $underSlide.css('border-radius', `${borderRadiusValue}px`);
+    $overSlide.css('border-radius', `${borderRadiusValue}px`);
   
     // Slide in side images
     $leftImage = $('.left-image');
