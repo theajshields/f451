@@ -75,6 +75,9 @@ body {
   transform-origin: center top;
   will-change: transform;
   box-shadow: 0px -50px 200px rgba(255, 255, 255, 0.4); /* Adjusted shadow to compensate for the rounded corners */
+  width: 100%; /* Full width of the parent */
+  height: 100%; /* Full height of the parent */
+  position: relative;
 }
 
 .under-slide {
