@@ -69,7 +69,7 @@ body {
   align-items: center;
   transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease; /* Smooth transition */
   transition: border-radius 0.3s ease; /* Animate border-radius */
-  box-shadow: 0px -50px 200px rgba(255, 255, 255, 0.4); /* Adjusted shadow to compensate for the rounded corners */
+  box-shadow: 0px -50px 300px rgba(255, 255, 255, 0.4); /* Adjusted shadow to compensate for the rounded corners */
 }
 
 .image-reveal {
