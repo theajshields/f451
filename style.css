@@ -51,12 +51,12 @@ body {
 
 .left-image {
   left: 0;
-  background-image: url("img/red.png");
+  background-image: url("https://picsum.photos/600/1000");
 }
 
 .right-image {
   right: 0;
-  background-image: url("img/blue.png");
+  background-image: url("https://picsum.photos/600/1000");
 }
 
 .center-wrapper {
@@ -89,7 +89,7 @@ body {
   padding-top: 41%;
   top: 0;
   left: 0;
-  background: url("https://res.cloudinary.com/dunkimages/image/upload/v1569903804/codepen/image-revealer-1.jpg") no-repeat;
+  background: url("img/red.png") no-repeat;
   background-size: cover;
 }
 
@@ -106,7 +106,7 @@ body {
 .over-image {
   height: 100%;
   width: 100%;
-  background: url("https://res.cloudinary.com/dunkimages/image/upload/v1569903804/codepen/image-revealer-2.jpg") no-repeat;
+  background: url("img/blue.png") no-repeat;
   background-size: cover;
 }
 
