@@ -20,7 +20,7 @@ body {
   z-index: 999;
   border-radius: 100px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
 .container {
@@ -131,13 +131,13 @@ body {
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
   color: white; /* Text color */
-  font-size: 30px; /* Font size of the text inside the button */
+  font-size: 25px; /* Font size of the text inside the button */
   border: none; /* Remove border */
   display: flex; /* Center the content */
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Optional: add a shadow to the button */
-  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.2);
   cursor: pointer; /* Change the cursor to a pointer on hover */
   z-index: 999; /* Ensure the button stays above other content */
   transition: background-color 0.3s ease; /* Optional: add smooth transition on hover */
