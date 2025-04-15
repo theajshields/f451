@@ -84,7 +84,7 @@
 
   $(window).on('scroll', function() {
     var $imageReveal, $leftImage, $rightImage, borderRadiusValue, currentScroll, maxHeight, maxPullVW, maxScroll, minHeight, pullAmount, scaleValue, scrollProgress, spacerHeight;
-    maxScroll = 400; // amount of scroll (px) it takes to complete the animation
+    maxScroll = 500; // amount of scroll (px) it takes to complete the animation
     currentScroll = window.scrollY;
     $imageReveal = $('.center-wrapper');
     // Clamp scroll value between 0 and maxScroll
