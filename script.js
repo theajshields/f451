@@ -14,7 +14,7 @@
       return playPauseButton.textContent = '❙❙'; // Change button text to "Pause"
     } else {
       audio.pause(); // If audio is playing, pause it
-      return playPauseButton.textContent = '⯈'; // Change button text to "Play"
+      return playPauseButton.textContent = '⏵'; // Change button text to "Play"
     }
   });
 
