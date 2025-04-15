@@ -83,10 +83,12 @@
   lastScrollY = window.scrollY;
 
   $(window).on('scroll', function() {
-    var $imageReveal, $leftImage, $rightImage, borderRadiusValue, currentScroll, maxHeight, maxPullVW, maxScroll, minHeight, pullAmount, scaleValue, scrollProgress, spacerHeight;
+    var $imageReveal, $leftImage, $rightImage, $imageWrapper, borderRadiusValue, currentScroll, maxHeight, maxPullVW, maxScroll, minHeight, pullAmount, scaleValue, scrollProgress, spacerHeight;
     maxScroll = 500; // amount of scroll (px) it takes to complete the animation
     currentScroll = window.scrollY;
     $imageReveal = $('.center-wrapper');
+    $imageWrapper = $('.image-wrapper'); // Select the image wrapper element
+  
     // Clamp scroll value between 0 and maxScroll
     scrollProgress = Math.min(currentScroll, maxScroll);
     
@@ -95,8 +97,12 @@
     $imageReveal.css('transform', `scale(${scaleValue})`);
     
     // Animate border-radius of center div
-    borderRadiusValue = (scrollProgress / maxScroll) * 30; // From 0 to 25px
+    borderRadiusValue = (scrollProgress / maxScroll) * 30; // From 0 to 30px
     $('.center-wrapper').css('border-radius', `${borderRadiusValue}px`);
+  
+    // Animate border-radius of the image wrapper
+    $imageWrapper.css('border-radius', `${borderRadiusValue}px`);
+  
     // Slide in side images
     $leftImage = $('.left-image');
     $rightImage = $('.right-image');
@@ -114,7 +120,6 @@
     });
     
     // Animate the scroll-spacer height
-    // As the user scrolls, the scroll spacer height will reduce or increase
     maxHeight = 600; // Starting height in vh
     minHeight = 150; // Final height in vh
     spacerHeight = maxHeight - ((maxHeight - minHeight) * (scrollProgress / maxScroll));
