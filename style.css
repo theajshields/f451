@@ -68,14 +68,13 @@ body {
   justify-content: center;
   align-items: center;
   transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease; /* Smooth transition */
-  background-color: rgba(0, 0, 0, 0);
 }
 
 .image-reveal {
   transition: transform 0.3s ease;
   transform-origin: center top;
   will-change: transform;
-  box-shadow: inset 0px -50px 200px rgba(255, 255, 255, 0.4); /* Use 'inset' to make the shadow inside */
+  box-shadow: 0px -50px 200px rgba(255, 255, 255, 0.4); /* Adjusted shadow to compensate for the rounded corners */
   width: 100%; /* Full width of the parent */
   height: 100%; /* Full height of the parent */
   position: relative;
