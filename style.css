@@ -50,12 +50,12 @@ body {
 
 .left-image {
   left: 0;
-  background-image: url("https://picsum.photos/300/500");
+  background-image: url("https://picsum.photos/600/1000");
 }
 
 .right-image {
   right: 0;
-  background-image: url("https://picsum.photos/300/500");
+  background-image: url("https://picsum.photos/600/1000");
 }
 
 .center-wrapper {
