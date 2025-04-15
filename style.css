@@ -30,7 +30,7 @@ body {
 }
 
 .scroll-spacer {
-  height: 500vh; /* Set the initial height */
+  height: 600vh; /* Set the initial height */
   transition: height 0.3s ease; /* Smooth transition for height change */
   pointer-events: none;
 }
