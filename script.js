@@ -20,9 +20,6 @@
 
   imageReveal = class imageReveal {
     constructor(el) {
-      this._bindEvents = this._bindEvents.bind(this);
-      this.startReveal = this.startReveal.bind(this);
-      this.resetReveal = this.resetReveal.bind(this);
       this.calculateSplit = this.calculateSplit.bind(this);
       this.moveSplit = this.moveSplit.bind(this);
       this.el = el;
@@ -30,31 +27,9 @@
       this.overImage = this.el.find('.js-over-image');
       this.divider = this.el.find('.js-divider');
       console.log(this.el);
-      this._bindEvents();
-      this.resetReveal();
-    }
   
-    _bindEvents() {
-      // Start reveal on mouse enter
-      this.el.on('mouseenter', this.startReveal);
-      // Reset reveal on mouse leave
-      this.el.on('mouseleave', this.resetReveal);
-    }
-  
-    startReveal() {
-      console.log('start reveal');
-      // Listen for mousemove on the entire window
+      // Always listen for mousemove on the window
       $(window).on('mousemove', this.calculateSplit);
-    }
-  
-    resetReveal() {
-      var elMiddle;
-      console.log('reset');
-      // Stop listening for mousemove
-      $(window).off('mousemove', this.calculateSplit);
-      // Reset the divider to the middle of the element
-      elMiddle = this.el.width() / 2;
-      this.moveSplit(elMiddle);
     }
   
     calculateSplit(e) {
@@ -65,7 +40,7 @@
     }
   
     moveSplit(offset) {
-      // Ensure offset is clamped within the element's width
+      // Ensure offset is clamped within the viewport width
       if (offset < 0) {
         offset = 0;
       } else if (offset > $(window).width()) {
