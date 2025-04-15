@@ -94,9 +94,9 @@
     scaleValue = 1 - (0.5 * (scrollProgress / maxScroll));
     $imageReveal.css('transform', `scale(${scaleValue})`);
     
-    // Animate border-radius of .under-slide
+    // Animate border-radius of center div
     borderRadiusValue = (scrollProgress / maxScroll) * 30; // From 0 to 25px
-    $('.under-slide').css('border-radius', `${borderRadiusValue}px`);
+    $('.center-wrapper').css('border-radius', `${borderRadiusValue}px`);
     // Slide in side images
     $leftImage = $('.left-image');
     $rightImage = $('.right-image');
