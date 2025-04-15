@@ -116,7 +116,7 @@
     // Animate the scroll-spacer height
     // As the user scrolls, the scroll spacer height will reduce or increase
     maxHeight = 600; // Starting height in vh
-    minHeight = 0; // Final height in vh
+    minHeight = 150; // Final height in vh
     spacerHeight = maxHeight - ((maxHeight - minHeight) * (scrollProgress / maxScroll));
     return $('.scroll-spacer').css('height', `${spacerHeight}vh`);
   });
