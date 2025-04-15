@@ -11,7 +11,7 @@
   playPauseButton.addEventListener('click', function() {
     if (audio.paused) {
       audio.play(); // If audio is paused, play it
-      return playPauseButton.textContent = '⏸'; // Change button text to "Pause"
+      return playPauseButton.textContent = '❙❙'; // Change button text to "Pause"
     } else {
       audio.pause(); // If audio is playing, pause it
       return playPauseButton.textContent = '▶'; // Change button text to "Play"
