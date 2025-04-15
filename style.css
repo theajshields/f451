@@ -38,8 +38,8 @@ body {
 .side-image {
   position: fixed;
   bottom: 0%;
-  width: 400px;
-  height: 600px;
+  width: 300px;
+  height: 500px;
   background-size: cover;
   background-repeat: no-repeat;
   transform: translateX(0vw); /* default transform */
