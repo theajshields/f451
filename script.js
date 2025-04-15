@@ -29,48 +29,54 @@
       this.overSlide = this.el.find('.js-over-slide');
       this.overImage = this.el.find('.js-over-image');
       this.divider = this.el.find('.js-divider');
-      // bind those thangs
       console.log(this.el);
       this._bindEvents();
       this.resetReveal();
     }
-
+  
     _bindEvents() {
+      // Start reveal on mouse enter
       this.el.on('mouseenter', this.startReveal);
-      return this.el.on('mouseleave', this.resetReveal);
+      // Reset reveal on mouse leave
+      this.el.on('mouseleave', this.resetReveal);
     }
-
+  
     startReveal() {
       console.log('start reveal');
-      return this.el.on('mousemove', this.calculateSplit);
+      // Listen for mousemove on the entire window
+      $(window).on('mousemove', this.calculateSplit);
     }
-
+  
     resetReveal() {
       var elMiddle;
       console.log('reset');
-      this.el.off('mousemove', this.calculateSplit);
+      // Stop listening for mousemove
+      $(window).off('mousemove', this.calculateSplit);
+      // Reset the divider to the middle of the element
       elMiddle = this.el.width() / 2;
-      return this.moveSplit(elMiddle);
+      this.moveSplit(elMiddle);
     }
-
+  
     calculateSplit(e) {
-      var elOffset;
-      elOffset = this.el.offset().left;
-      //console.log elOffset
-      //console.log e
-      return this.moveSplit(e.pageX - elOffset);
+      // Use the mouse's x position relative to the viewport
+      var offset = e.pageX;
+      console.log('Mouse X:', offset);
+      this.moveSplit(offset);
     }
-
+  
     moveSplit(offset) {
+      // Ensure offset is clamped within the element's width
       if (offset < 0) {
         offset = 0;
+      } else if (offset > $(window).width()) {
+        offset = $(window).width();
       }
-      console.log(offset);
+      console.log('Offset:', offset);
+      // Move the overSlide, overImage, and divider based on the offset
       this.overSlide.css('transform', 'translateX(' + offset + 'px)');
       this.overImage.css('transform', 'translateX(-' + offset + 'px)');
-      return this.divider.css('transform', 'translateX(' + offset + 'px)');
+      this.divider.css('transform', 'translateX(' + offset + 'px)');
     }
-
   };
 
   //export the goods
