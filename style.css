@@ -59,8 +59,15 @@ body {
 }
 
 .center-wrapper {
+  position: fixed; /* Fix it to the viewport initially */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease; /* Smooth transition */
 }
 
 .image-reveal {
