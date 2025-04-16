@@ -64,7 +64,7 @@
   lastScrollY = window.scrollY;
 
   $(window).on('scroll', function() {
-    var $imageReveal, $leftImage, $rightImage, $imageWrapper, $underSlide, $overSlide, borderRadiusValue, currentScroll, maxHeight, maxPullVW, maxScroll, minHeight, pullAmount, scaleValue, scrollProgress, spacerHeight;
+    var $imageReveal, $leftImage, $rightImage, $imageWrapper, $underSlide, $overSlide, borderRadiusValue, currentScroll, maxHeight, maxPullVW, maxScroll, minHeight, pullAmount, scaleValue, scrollProgress, spacerHeight, paddingTopValue;
     maxScroll = 500; // amount of scroll (px) it takes to complete the animation
     currentScroll = window.scrollY;
     $imageReveal = $('.center-wrapper');
@@ -90,6 +90,10 @@
     $underSlide.css('border-radius', `${borderRadiusValue}px`);
     $overSlide.css('border-radius', `${borderRadiusValue}px`);
   
+    // Animate padding-top of under-slide
+    paddingTopValue = 100 - (56 * (scrollProgress / maxScroll)); // From 100% to 44%
+    $underSlide.css('padding-top', `${paddingTopValue}%`);
+  
     // Slide in side images
     $leftImage = $('.left-image');
     $rightImage = $('.right-image');
@@ -112,5 +116,5 @@
     spacerHeight = maxHeight - ((maxHeight - minHeight) * (scrollProgress / maxScroll));
     return $('.scroll-spacer').css('height', `${spacerHeight}vh`);
   });
-
+  
 }).call(this);

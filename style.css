@@ -86,7 +86,7 @@ body {
 .under-slide {
   position: relative;
   overflow: hidden;
-  padding-top: 41%;
+  transition: padding-top 0.3s ease;
   top: 0;
   left: 0;
   background: url("img/red.png") no-repeat;
