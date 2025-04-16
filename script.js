@@ -91,7 +91,7 @@
     $overSlide.css('border-radius', `${borderRadiusValue}px`);
   
     // Animate padding-top of under-slide
-    paddingTopValue = 100 - (56 * (scrollProgress / maxScroll)); // From 100% to 44%
+    paddingTopValue = 100 - (43 * (scrollProgress / maxScroll)); // From 100% to 44%
     $underSlide.css('padding-top', `${paddingTopValue}%`);
   
     // Slide in side images
@@ -116,5 +116,5 @@
     spacerHeight = maxHeight - ((maxHeight - minHeight) * (scrollProgress / maxScroll));
     return $('.scroll-spacer').css('height', `${spacerHeight}vh`);
   });
-  
+
 }).call(this);
