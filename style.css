@@ -81,6 +81,17 @@ body {
   height: 100%; /* Full height of the parent */
   position: relative;
   transition: border-radius 0.3s ease; /* Animate border-radius */
+  overflow: hidden; /* Ensure content stays within the container */
+}
+
+.image-reveal img {
+  width: 100%; /* Ensure the image scales to the container's width */
+  height: 100%; /* Ensure the image scales to the container's height */
+  object-fit: contain; /* Prevent the image from exceeding the container's bounds */
+  position: absolute; /* Keep the image positioned within the container */
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease; /* Smooth scaling transition */
 }
 
 .under-slide {
