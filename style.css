@@ -81,17 +81,6 @@ body {
   height: 100%; /* Full height of the parent */
   position: relative;
   transition: border-radius 0.3s ease; /* Animate border-radius */
-  overflow: hidden; /* Ensure content stays within the container */
-}
-
-.image-reveal img {
-  width: 100%; /* Ensure the image scales to the container's width */
-  height: 100%; /* Ensure the image scales to the container's height */
-  object-fit: contain; /* Prevent the image from exceeding the container's bounds */
-  position: absolute; /* Keep the image positioned within the container */
-  top: 0;
-  left: 0;
-  transition: transform 0.3s ease; /* Smooth scaling transition */
 }
 
 .under-slide {
@@ -100,7 +89,6 @@ body {
   transition: padding-top 0.3s ease;
   top: 0;
   left: 0;
-  object-fit: contain;
   background: url("img/pre.png") no-repeat;
   background-size: cover;
   padding-top: 100%;
@@ -110,12 +98,15 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
   transition: border-radius 0.3s ease; /* Animate border-radius */
 }
 
 .over-image {
-  object-fit: contain;
+  height: 100%;
+  width: 100%;
   background: url("img/blue.png") no-repeat;
   background-size: cover;
 }
