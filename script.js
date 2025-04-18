@@ -91,7 +91,7 @@
     $overSlide.css('border-radius', `${borderRadiusValue}px`);
   
     // Animate padding-top of under-slide
-    paddingTopValue = 100 - (46 * (scrollProgress / maxScroll)); // From 100% to 44%
+    paddingTopValue = 100 - (43 * (scrollProgress / maxScroll)); // From 100% to 44%
     $underSlide.css('padding-top', `${paddingTopValue}%`);
   
     // Slide in side images
