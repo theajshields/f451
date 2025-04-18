@@ -51,12 +51,12 @@ body {
 
 .left-image {
   left: 0;
-  background-image: url("https://picsum.photos/600/1000");
+  background-image: url("img/mildred.png");
 }
 
 .right-image {
   right: 0;
-  background-image: url("https://picsum.photos/600/1000");
+  background-image: url("img/clarisse.png");
 }
 
 .center-wrapper {
@@ -89,7 +89,7 @@ body {
   transition: padding-top 0.3s ease;
   top: 0;
   left: 0;
-  background: url("img/red.png") no-repeat;
+  background: url("img/pre.png") no-repeat;
   background-size: cover;
   padding-top: 100%;
 }
