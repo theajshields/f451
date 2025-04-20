@@ -91,7 +91,6 @@ body {
   left: 0;
   background: url("img/pre.png") no-repeat;
   position: absolute;
-  background-size: cover;
   padding-top: 100%;
 }
 
@@ -109,7 +108,7 @@ body {
   height: 100%;
   width: 100%;
   position: absolute;
-  background: url("img/pro.png") no-repeat;
+  background: url("img/blue.png") no-repeat;
   background-size: cover;
 }
 
