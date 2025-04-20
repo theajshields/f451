@@ -90,7 +90,8 @@ body {
   top: 0;
   left: 0;
   background: url("img/pre.png") no-repeat;
-  position: absolute;
+  background-size: cover;
+  padding-top: 100%;
 }
 
 .over-slide {
