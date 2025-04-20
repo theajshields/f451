@@ -4,6 +4,24 @@ body {
   font-family: Special Gothic Expanded One;
 }
 
+.scroll-text {
+  position: fixed;
+  top: 10px; /* Position near the top */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center alignment */
+  font-size: 18px; /* Adjust font size */
+  color: white; /* Text color */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(10px);
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 5px 10px; /* Add some padding */
+  border-radius: 100px;
+  z-index: 1000; /* Ensure it stays on top */
+  opacity: 1; /* Fully visible initially */
+  transition: opacity 0.5s ease; /* Smooth fade-out */
+}
+
 .bottom-text {
   position: fixed; /* Fixes the element relative to the viewport */
   bottom: 10px; /* Positions it at the bottom */

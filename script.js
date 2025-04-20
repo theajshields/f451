@@ -74,11 +74,17 @@
   
     // Clamp scroll value between 0 and maxScroll
     scrollProgress = Math.min(currentScroll, maxScroll);
-    
+  
+    // Fade out the scroll-text
+    var fadeOutPoint = 100; // Adjust this value to control when the text fades out
+    var opacity = 1 - (currentScroll / fadeOutPoint);
+    if (opacity < 0) opacity = 0; // Ensure opacity doesn't go below 0
+    $('.scroll-text').css('opacity', opacity);
+  
     // Calculate scale: from 1 to 0.85 over maxScroll pixels
     scaleValue = 1 - (0.5 * (scrollProgress / maxScroll));
     $imageReveal.css('transform', `scale(${scaleValue})`);
-    
+  
     // Animate border-radius of center div
     borderRadiusValue = (scrollProgress / maxScroll) * 30; // From 0 to 30px
     $('.center-wrapper').css('border-radius', `${borderRadiusValue}px`);
@@ -109,7 +115,7 @@
       'transform': `translateX(${100 - pullAmount}%)`,
       'opacity': scrollProgress / maxScroll
     });
-    
+  
     // Animate the scroll-spacer height
     maxHeight = 600; // Starting height in vh
     minHeight = 150; // Final height in vh
