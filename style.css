@@ -106,11 +106,15 @@ body {
 }
 
 .over-image {
-  height: 100%;
-  width: 100%;
-  position: absolute;
+  position: relative;
+  overflow: hidden;
+  transition: padding-top 0.3s ease;
+  top: 0;
+  left: 0;
   background: url("img/pro.png") no-repeat;
+  position: absolute
   background-size: cover;
+  padding-top: 100%;
 }
 
 .divider {
