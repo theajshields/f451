@@ -9,7 +9,7 @@ body {
   top: 10px; /* Position near the top */
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Center alignment */
-  font-size: 18px; /* Adjust font size */
+  font-size: 8px; /* Adjust font size */
   color: white; /* Text color */
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
   backdrop-filter: blur(10px);
