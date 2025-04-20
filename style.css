@@ -10,8 +10,8 @@ body {
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Center alignment */
   font-size: 8px; /* Adjust font size */
-  color: white; /* Text color */
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: rgba(255, 255, 255, 0.5); /* Text color */
+  background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent background */
   backdrop-filter: blur(10px);
   text-align: center;
   letter-spacing: 1px;
